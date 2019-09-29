@@ -1,14 +1,17 @@
 $(document).ready(function () {
 
   // TRIGGER FIREBASE
-  var config = {
-    apiKey: "AIzaSyA4Y6Ywc3MMHCQ7tZHkMyH1l9vx_qSRA6M",
-    authDomain: "train-schedule-5f60e.firebaseapp.com",
-    databaseURL: "https://train-schedule-5f60e.firebaseio.com/",
-    storageBucket: "train-schedule-5f60e.appspot.com",
-    messagingSenderId: 287123784516
+  var firebaseConfig = {
+    apiKey: "AIzaSyBvv104Zu_1hNyyWGup3HzR-E_3Re7ZsNc",
+    authDomain: "train-scheduler-f31b0.firebaseapp.com",
+    databaseURL: "https://train-scheduler-f31b0.firebaseio.com",
+    projectId: "train-scheduler-f31b0",
+    storageBucket: "train-scheduler-f31b0.appspot.com",
+    messagingSenderId: "854033301221",
+    appId: "1:854033301221:web:9450944de55efa88b49e0c"
   };
-  firebase.initializeApp(config);
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
 
@@ -16,13 +19,13 @@ $(document).ready(function () {
   $("#addTrain").on("click", function (event) {
     event.preventDefault();
 
-    // Grabbed values from text boxes
-    var trainName = $("#trainName").val().trim();
-    var destination = $("#destination").val().trim();
-    var firstTrain = $("#firstTrain").val().trim();
-    var freq = $("#interval").val().trim();
+//INPUTS IN TEXTBOXES
+var trainName = $("#trainName").val().trim();
+var destination = $("#destination").val().trim();
+var firstTrain = $("#firstTrain").val().trim();
+var freq = $("#interval").val().trim();
 
-    // Code for handling the push
+    //TO GET THE PUSH 
     database.ref().push({
       trainName: trainName,
       destination: destination,
