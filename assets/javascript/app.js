@@ -1,6 +1,8 @@
+//tells me that the JS file is working
 function myFunction() {
     alert("Hello! I am an alert box!");
   }
+
 $(document).ready(function () {
 
     var firebaseConfig = {
