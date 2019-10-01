@@ -2,31 +2,24 @@
 
 <html lang="en">
 
-<body>
-<!-- Latest compiled and minified CSS -->
 <head>
 
     <meta charset="UTF-8">
     <title>Train Scheduler - Ferd Marinho</title>
 
     <!-- Reset CSS -->
+    <script src="assets/javascript/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
-    <!-- Link to JS -->
-    <script src="assets/javascript/app.js"></script>
-    <!-- Moment JS -->
     <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
-    <!-- Link to CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   
 
 </head>
 
+<body>
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">The Train is Coming</h1>
@@ -77,6 +70,7 @@
                 <input class="form-control" id="interval" type="number">
               </div>
               <button class="btn btn-info" id="addTrain" type="submit">Submit</button>
+              <button onclick="myFunction()">Submit 2</button>
             </form>
           </div>
         </div>
@@ -86,10 +80,6 @@
 
   </div>
 
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>

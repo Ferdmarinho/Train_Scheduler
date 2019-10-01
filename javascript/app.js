@@ -1,6 +1,11 @@
+function myFunction() {
+  alert("Hello! I am an alert box!");
+}
+
 $(document).ready(function () {
 
-  // TRIGGER FIREBASE
+  
+
   var firebaseConfig = {
     apiKey: "AIzaSyBvv104Zu_1hNyyWGup3HzR-E_3Re7ZsNc",
     authDomain: "train-scheduler-f31b0.firebaseapp.com",
@@ -12,20 +17,20 @@ $(document).ready(function () {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
+  
   var database = firebase.database();
 
   // Capture Button Click
   $("#addTrain").on("click", function (event) {
     event.preventDefault();
 
-//INPUTS IN TEXTBOXES
-var trainName = $("#trainName").val().trim();
-var destination = $("#destination").val().trim();
-var firstTrain = $("#firstTrain").val().trim();
-var freq = $("#interval").val().trim();
+    // Grabbed values from text boxes
+    var trainName = $("#trainName").val().trim();
+    var destination = $("#destination").val().trim();
+    var firstTrain = $("#firstTrain").val().trim();
+    var freq = $("#interval").val().trim();
 
-    //TO GET THE PUSH 
+    // Code for handling the push
     database.ref().push({
       trainName: trainName,
       destination: destination,
